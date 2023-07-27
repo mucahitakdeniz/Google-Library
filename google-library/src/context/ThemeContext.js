@@ -1,21 +1,21 @@
-import { createContext, useContext } from "react";
-import { ThemeContext } from "styled-components";
+// Theme Context
 
+import { createContext, useContext, useState } from "react";
 
-const ThemeContext=createContext()
- 
-const ThemeContextProvider=({children})=>{
-    const [myTheme, setMyTheme] = useState("light")
+const ThemeContext = createContext();
 
+const ThemeContextProvider = ({ children }) => {
+  const [myTheme, setMyTheme] = useState("light");
 
-    return (
-        <ThemeContext.Provider value={}>
-            {children}
-        </ThemeContext.Provider>
-    )
+  return (
+    <ThemeContext.Provider value={{ myTheme, setMyTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-}
-export const useThemeContext=() =>{
+export const useThemeContext = () => {
     return useContext(ThemeContext)
 }
-export default ThemeContextProvider
+
+export default ThemeContextProvider;

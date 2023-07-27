@@ -1,4 +1,4 @@
-export const lighTheme = {
+export const lightTheme = {
   colors: {
     navbarBgColor: "white",
     mainColor: "#86C8BC",
