@@ -8,7 +8,7 @@ function App() {
   const { myTheme } = useThemeContext();
   const themes = myTheme === "light" ? lightTheme : darkTheme;
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={themes}>
       <GlobalStles />
       <AppRouter />
     </ThemeProvider>
